@@ -1,5 +1,5 @@
 # Angular.js for Rails 3
-Make Angular.js (http://angularjs.org) into Rails Engine. 
+Make [Angular.js](http://angularjs.org) into Rails Engine. 
 
 ## Version
 Angular.js 1.0.2
@@ -13,6 +13,14 @@ Add javascripts into application.js
 
     //= require angular/angular
     //= require angular/angular-resource
+
+## CDN
+
+This gem supports cdn the same as [jquery-rails-cdn](https://github.com/yjchen/jquery-rails-cdn). In the application layout, add
+
+    = angular_include_tag
+
+and remove corresponding lines in application.js.
 
 ## License
 
