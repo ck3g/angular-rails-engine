@@ -18,7 +18,7 @@ Add javascripts into application.js
 
 This gem supports cdn the same as [jquery-rails-cdn](https://github.com/yjchen/jquery-rails-cdn). In the application layout, add
 
-    = angular_include_tag
+    = angular_include_tag :default
 
 and remove corresponding lines in application.js.
 
