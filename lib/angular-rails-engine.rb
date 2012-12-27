@@ -13,11 +13,14 @@ module AngularRailsEngine
     end
 
     def angular_js_include_tag(name, options = {})
+      angularjs = 'angular/angular'
+      angularjs = angularjs+'.min' if options[:compressed]
+
       if OFFLINE and !options[:force]
-        return javascript_include_tag('angular/angular')
+        return javascript_include_tag(angularjs)
       else
         [ javascript_include_tag(angular_js_url(name, options)),
-          javascript_tag("window.angular || document.write(unescape('#{javascript_include_tag('angular/angular').gsub('<','%3C')}'))")
+          javascript_tag("window.angular || document.write(unescape('#{javascript_include_tag(angularjs).gsub('<','%3C')}'))")
         ].join("\n").html_safe
       end
     end

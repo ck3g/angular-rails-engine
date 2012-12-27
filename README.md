@@ -22,6 +22,18 @@ This gem supports cdn the same as [jquery-rails-cdn](https://github.com/yjchen/j
 
 and remove corresponding lines in application.js.
 
+## Options
+
+Set :compressed to use minimized library locally like this:
+
+    = angular_include_tag :default, :compressed => true
+
+Remember to change the assets name in confign/environments/production.rb:
+
+    config.assets.precompile += %w( angular/angular.min.js)
+
+See https://gist.github.com/3698589 for using Angular.js with Rails assets.
+
 ## License
 
 Copyright (c) 2012 Yen-Ju Chen
