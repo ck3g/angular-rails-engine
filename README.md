@@ -2,7 +2,7 @@
 Make [Angular.js](http://angularjs.org) into Rails Engine. 
 
 ## Version
-Angular.js 1.0.2
+Angular.js 1.0.6
 
 ## Rails 3.1 or later
 Include Gemfile,
