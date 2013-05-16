@@ -8,19 +8,19 @@ module AngularRailsEngine
       }
     }
 
-    def angular_js_url(name, options = {})
+    def angular_js_url(name)
       return CDNS[:angular_js][name]
     end
 
     def angular_js_include_tag(name, options = {})
       angularjs = 'angular/angular'
-      angularjs = angularjs+'.min' if options[:compressed]
+      angularjs = angularjs+'.min' if options.delete(:compressed)
 
-      if OFFLINE and !options[:force]
-        return javascript_include_tag(angularjs)
+      if OFFLINE and !options.delete(:force)
+        return javascript_include_tag(angularjs, options)
       else
-        [ javascript_include_tag(angular_js_url(name, options)),
-          javascript_tag("window.angular || document.write(unescape('#{javascript_include_tag(angularjs).gsub('<','%3C')}'))")
+        [ javascript_include_tag(angular_js_url(name), options),
+          javascript_tag("window.angular || document.write(unescape('#{javascript_include_tag(angularjs, options).gsub('<','%3C')}'))")
         ].join("\n").html_safe
       end
     end
