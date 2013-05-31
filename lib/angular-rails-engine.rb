@@ -13,15 +13,20 @@ module AngularRailsEngine
     end
 
     def angular_js_include_tag(name, options = {})
+      options.reverse_merge! :local_copy => false
+
       angularjs = 'angular/angular'
       angularjs = angularjs+'.min' if options.delete(:compressed)
 
       if OFFLINE and !options.delete(:force)
+        options.delete(:local_copy) # not used in OFFLINE mode
         return javascript_include_tag(angularjs, options)
       else
-        [ javascript_include_tag(angular_js_url(name), options),
-          javascript_tag("window.angular || document.write(unescape('#{javascript_include_tag(angularjs, options).gsub('<','%3C')}'))")
-        ].join("\n").html_safe
+        j = [ javascript_include_tag(angular_js_url(name), options) ]
+        if options.delete(:local_copy)
+          j << javascript_tag("window.angular || document.write(unescape('#{javascript_include_tag(angularjs, options).gsub('<','%3C')}'))")
+        end
+        j.join("\n").html_safe
       end
     end
   end
