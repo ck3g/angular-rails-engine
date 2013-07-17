@@ -1,4 +1,4 @@
-# Angular.js for Rails 3
+# Angular.js for Rails 3 & 4
 Make [Angular.js](http://angularjs.org) into Rails Engine. 
 
 ## Version
@@ -18,15 +18,15 @@ Add javascripts into application.js
 
 This gem supports cdn the same as [jquery-rails-cdn](https://github.com/yjchen/jquery-rails-cdn). In the application layout, add
 
-    = angular_include_tag :default
+    = angular_js_include_tag :default
 
 and remove corresponding lines in application.js.
 
-## Options
+### Options
 
 Set :compressed to use minimized library locally like this:
 
-    = angular_include_tag :default, :compressed => true
+    = angular_js_include_tag :default, :compressed => true
 
 Set :local_copy true to use local copy when CDN is not available.
 
@@ -38,7 +38,7 @@ See https://gist.github.com/3698589 for using Angular.js with Rails assets.
 
 ## License
 
-Copyright (c) 2012 Yen-Ju Chen
+Copyright (c) 2012-2013 Yen-Ju Chen
 
 MIT License
 
