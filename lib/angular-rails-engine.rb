@@ -4,7 +4,7 @@ module AngularRailsEngine
 
     CDNS = {
       :angular_js => {
-        :default => "//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"
+        :default => "//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"
       }
     }
 
