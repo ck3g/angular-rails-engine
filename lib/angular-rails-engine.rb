@@ -1,10 +1,11 @@
 module AngularRailsEngine
   module ActionViewExtensions
+    ANGULAR_VERSION = '1.1.5'
     OFFLINE = (::Rails.env.development? or ::Rails.env.test?)
 
     CDNS = {
       :angular_js => {
-        :default => "//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"
+        :default => "//ajax.googleapis.com/ajax/libs/angularjs/#{ANGULAR_VERSION}/angular.min.js"
       }
     }
 
