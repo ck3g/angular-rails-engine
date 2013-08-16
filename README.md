@@ -2,11 +2,11 @@
 Make [Angular.js](http://angularjs.org) into Rails Engine. 
 
 ## Version
-Angular.js 1.1.5
+Angular.js 1.2.0rc1
 
 ### Older Versions
 
-For Angular.js 1.0.x, try [1.0 branch](https://github.com/yjchen/angular-rails-engine/tree/1.0) or gem version around 1.0.x.x.
+For Angular.js 1.0.x, try [1.0 branch](https://github.com/yjchen/angular-rails-engine/tree/1.0) or gem version around 1.0.x.x. So does 1.1.x from its branch.
 
 ## Rails 3.2 or later
 Include Gemfile,
