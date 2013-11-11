@@ -2,7 +2,7 @@
 Make [Angular.js](http://angularjs.org) into Rails Engine. 
 
 ## Version
-Angular.js 1.2.0rc1
+Angular.js 1.2.0
 
 ### Older Versions
 

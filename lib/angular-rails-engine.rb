@@ -1,6 +1,6 @@
 module AngularRailsEngine
   module ActionViewExtensions
-    ANGULAR_VERSION = '1.2.0rc1'
+    ANGULAR_VERSION = '1.2.0'
     OFFLINE = (::Rails.env.development? or ::Rails.env.test?)
 
     CDNS = {
