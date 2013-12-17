@@ -1,5 +1,5 @@
 module AngularRailsEngine
   module Rails
-    VERSION = "1.2.3.0"
+    VERSION = "1.2.5.0"
   end
 end
