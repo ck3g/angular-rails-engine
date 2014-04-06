@@ -34,7 +34,7 @@ Set :compressed to use minimized library locally like this:
 
 Set :local_copy true to use local copy when CDN is not available.
 
-Remember to add assets name in confign/environments/production.rb:
+Remember to add assets name in config/environments/production.rb:
 
     config.assets.precompile += %w( angular/angular.min.js)
 
